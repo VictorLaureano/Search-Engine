@@ -2,7 +2,8 @@ import { Result } from 'antd';
 import React from 'react';
 import './App.css';
 
-//Api implementation was made by using NewsApi Module.
+
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -28,7 +29,7 @@ class App extends React.Component{
       category: 'business',
       language: 'en',
       country: 'us'
-    }).then(response => {
+    }).then(response => { //Takes the response from newsapi, and turns it into an array.
         // console.log(response);
         for(var key in response.articles){
           pointerToThis.state.searchReturnValues.push({
@@ -85,7 +86,7 @@ class App extends React.Component{
 
      
 
-  changeSearchTerms = (e) => {
+  changeSearchTerms = (e) => { //Changes the item in search.
     this.setState({
       searchTerms : e.target.value
     });
@@ -96,7 +97,7 @@ class App extends React.Component{
   render(){
     let searchResult = [];
     console.log(this.state.searchReturnValues)
-    for (var key4 in this.state.searchReturnValues) {
+    for (var key4 in this.state.searchReturnValues) { //Pushing article values to be shown on page.
       searchResult.push(
         <div className="searchResultDiv" key={key4}>
           <img className = 'image' src={this.state.searchReturnValues[key4].articleResultImageUrl} alt="ImageNotAvaliable" height ='250' width = '350'></img>
