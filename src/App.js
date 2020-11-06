@@ -2,6 +2,7 @@ import { Result } from 'antd';
 import React from 'react';
 import './App.css';
 
+//Api implementation was made by using NewsApi Module.
 class App extends React.Component{
   constructor(props){
     super(props);
