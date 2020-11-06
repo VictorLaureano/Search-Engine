@@ -100,9 +100,10 @@ class App extends React.Component{
         <div className="searchResultDiv" key={key4}>
           <img className = 'image' src={this.state.searchReturnValues[key4].articleResultImageUrl} alt="ImageNotAvaliable" height ='250' width = '350'></img>
           <h3><a style={{display: "table-cell"}} href={this.state.searchReturnValues[key4].articleResultFullUrl} target="_blank" rel="noopener noreferrer" >{this.state.searchReturnValues[key4].articleResultPageTitle}
-          <p className="description" dangerouslySetInnerHTML={{__html: this.state.searchReturnValues[key4].articleResultPageDescription}}></p>
           
-          </a></h3>
+          </a>
+          <p className="description" dangerouslySetInnerHTML={{__html: this.state.searchReturnValues[key4].articleResultPageDescription}}></p>
+          </h3>
 
         </div>
       );
